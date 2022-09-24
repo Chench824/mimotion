@@ -58,7 +58,8 @@ def getWeather():
         return
     else:
         global K, type
-        url = 'http://wthrcdn.etouch.cn/weather_mini?city=' + area
+#         url = 'http://wthrcdn.etouch.cn/weather_mini?city=' + area
+        url = 'http://wthrcdn.etouch.cn/weather_mini?city=广州'
         hea = {'User-Agent': 'Mozilla/5.0'}
         r = requests.get(url=url, headers=hea)
         if r.status_code == 200:
