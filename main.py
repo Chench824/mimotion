@@ -93,11 +93,11 @@ def getBeijinTime():
     a = set_push[0]
     min_1 = min_dict[time_list[6]]
     max_1 = max_dict[time_list[6]]
-    hea = {'User-Agent': 'Mozilla/5.0'}
-    url = r'http://time1909.beijing-time.org/time.asp'
-    if open_get_weather:
-        getWeather()
-    r = requests.get(url=url, headers=hea)
+#     hea = {'User-Agent': 'Mozilla/5.0'}
+#     url = r'http://time1909.beijing-time.org/time.asp'
+#     if open_get_weather:
+#         getWeather()
+#     r = requests.get(url=url, headers=hea)
 #     if r.status_code == 200:
 #         result = r.text
 #         #print(result)
