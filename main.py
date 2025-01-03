@@ -267,10 +267,10 @@ def main(_user,_passwd,min_1, max_1, a):
 
 # 获取时间戳
 def get_time():
-    url = 'http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp'
+    url = 'http://quan.suning.com/getSysTime.do'
     response = requests.get(url, headers=headers).json()
-    t = response['data']['t']
-    return t
+    t = response['sysTime2']
+    return datetime.strptime(t, '%Y-%m-%d %H:%M:%S').timestamp()
 
 
 # 获取app_token
