@@ -268,10 +268,13 @@ def main(_user,_passwd,min_1, max_1, a):
 
 # 获取时间戳
 def get_time():
-    url = 'http://quan.suning.com/getSysTime.do'
+    # url = 'http://quan.suning.com/getSysTime.do'
+    url = 'https://cn.apihz.cn/api/time/getapi.php?id=88888888&key=88888888&type=2'
+    print(requests.get(url, headers=headers))
     response = requests.get(url, headers=headers).json()
     print(response)
-    t = response['sysTime2']
+    # t = response['sysTime2']
+    t = response['msg']
     return datetime.strptime(t, '%Y-%m-%d %H:%M:%S').timestamp()
 
 
