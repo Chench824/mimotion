@@ -270,6 +270,7 @@ def main(_user,_passwd,min_1, max_1, a):
 def get_time():
     url = 'http://quan.suning.com/getSysTime.do'
     response = requests.get(url, headers=headers).json()
+    print(response)
     t = response['sysTime2']
     return datetime.strptime(t, '%Y-%m-%d %H:%M:%S').timestamp()
 
