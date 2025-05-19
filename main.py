@@ -269,13 +269,14 @@ def main(_user,_passwd,min_1, max_1, a):
 # 获取时间戳
 def get_time():
     # url = 'http://quan.suning.com/getSysTime.do'
-    url = 'https://sapi.k780.com/?app=life.time&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json'
+    url = 'https://f.m.suning.com/api/ct.do'
     print(requests.get(url, headers=headers))
     response = requests.get(url, headers=headers).json()
     print(response)
     # t = response['sysTime2']
-    t = response['datetime_1']
-    return datetime.strptime(t, '%Y-%m-%d %H:%M:%S').timestamp()
+    t = response['currentTime']
+    # return datetime.strptime(t, '%Y-%m-%d %H:%M:%S').timestamp()
+    return t
 
 
 # 获取app_token
