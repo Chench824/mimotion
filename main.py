@@ -179,9 +179,10 @@ def login(user, password):
         "token": "access"
     }
     r1 = requests.post(url1, data=data1, headers=headers, allow_redirects=False)
-    print(r1.headers)
+    print("打印r1:" + r1)
+    print("获取r1.headers：" + r1.headers)
     location = r1.headers.get("Location")
-    print(location)
+    print("获取location：" + location)
     try:
         code = get_code(location)
     except:
