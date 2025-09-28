@@ -8,7 +8,7 @@ import time
 from typing import Any, Callable, Iterable, TypeVar
 
 import requests
-import pytz
+# import pytz
 
 T = TypeVar("T")
 
@@ -85,9 +85,9 @@ XTIMES = {
 # time_bj = datetime.datetime.today() + datetime.timedelta(hours=8)
 # now = time_bj.strftime("%Y-%m-%d %H:%M:%S")
 # print('now', now)
-tz = pytz.timezone('Asia/Shanghai')
-bj_time = datetime.datetime.now(tz)
-now = bj_time.strftime("%Y-%m-%d %H:%M:%S")
+# tz = pytz.timezone('Asia/Shanghai')
+# bj_time = datetime.datetime.now(tz)
+now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 headers = {"User-Agent": "MiFit/5.3.0 (iPhone; iOS 14.7.1; Scale/3.00)"}
 
