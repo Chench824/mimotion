@@ -129,7 +129,7 @@ def main_handle():
     if open_get_weather:
         getWeather()
 
-    xtime = int(bj_time.strftime("%H"))
+    xtime = int(now.strftime("%H"))
     print('xtime', xtime)
     if xtime > 17:
         xtime = 17
