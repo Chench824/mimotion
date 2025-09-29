@@ -88,7 +88,7 @@ XTIMES = {
 # now = time_bj.strftime("%Y-%m-%d %H:%M:%S")
 # print('now', now)
 # tz = datetime.datetime.utcnow() + timedelta(hours=8)
-bj_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time() + 8 * 3600))
+bj_time = datetime.datetime.utcnow() + timedelta(hours=8)
 now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 headers = {"User-Agent": "MiFit/5.3.0 (iPhone; iOS 14.7.1; Scale/3.00)"}
