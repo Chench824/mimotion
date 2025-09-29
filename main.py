@@ -8,8 +8,9 @@ import time
 from typing import Any, Callable, Iterable, TypeVar
 
 import requests
-from zoneinfo import ZoneInfo
+#from zoneinfo import ZoneInfo
 # import pytz
+from datetime import timedelta
 
 T = TypeVar("T")
 
@@ -86,7 +87,7 @@ XTIMES = {
 # time_bj = datetime.datetime.today() + datetime.timedelta(hours=8)
 # now = time_bj.strftime("%Y-%m-%d %H:%M:%S")
 # print('now', now)
-tz = ZoneInfo('Asia/Shanghai')
+tz = datetime.utcnow() + timedelta(hours=8)
 bj_time = datetime.datetime.now(tz)
 now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
