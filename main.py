@@ -87,7 +87,7 @@ XTIMES = {
 # time_bj = datetime.datetime.today() + datetime.timedelta(hours=8)
 # now = time_bj.strftime("%Y-%m-%d %H:%M:%S")
 # print('now', now)
-tz = datetime.utcnow() + timedelta(hours=8)
+tz = datetime.datetime.utcnow() + timedelta(hours=8)
 bj_time = datetime.datetime.now(tz)
 now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
